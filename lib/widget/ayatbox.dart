@@ -24,16 +24,23 @@ class _ayatboxState extends State<ayatbox> {
               SizedBox(height: 10),
               shareplaysave(widget: widget),
               SizedBox(height: 20),
-              Wrap(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(left: 10, right: 10),
-                    child: Text(widget.ayat[widget.index].text,
-                        style: GoogleFonts.poppins(fontSize: 20)),
-                  ),
-                ],
+              Container(
+                padding: const EdgeInsets.only(right: 15, left: 15),
+                alignment: Alignment.topRight,
+                child: Wrap(
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10, right: 8),
+                        child: Text(widget.ayat[widget.index].text,
+                            style: GoogleFonts.poppins(fontSize: 20.5)),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(height: 60),
+              SizedBox(height: 50),
             ],
           ),
         ),
